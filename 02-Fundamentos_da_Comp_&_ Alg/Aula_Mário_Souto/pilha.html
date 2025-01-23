@@ -1,0 +1,37 @@
+<script>
+    // LIFO (Last In First Out)
+    console.log("[Pilha/Stack]");
+
+    class browserHistoryStack {
+        constructor() {
+            this.cont = 0;
+            this.data = [];
+        }
+
+        push(item) { // Adicionar no final da pilha
+            this.cont = this.cont + 1;
+            this.data.push(item);
+        }
+
+        back() { // pop()
+            this.cont = this.cont - 1;
+            this.data.pop();
+        }
+
+        print() {
+            console.log("Contador:", this.cont);
+            console.log("Itens atuais na Pilha:", this.data);
+        }
+
+    }
+
+    const history = new browserHistoryStack();
+
+    history.push('www.google.com');
+    history.push('www.youtube.com');
+    history.push('www.gmail.com');
+    history.print();
+    history.back();
+    history.print();
+    
+</script>
