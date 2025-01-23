@@ -25,4 +25,9 @@ class Node {
     hasRight(element) {
 
     }
+
 }
+
+var novo = Node();
+
+novo.addLeft();
