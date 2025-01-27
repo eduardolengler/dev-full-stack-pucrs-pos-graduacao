@@ -1,1 +1,1 @@
-# dev-full-stack-pucrs-pos-graduacao
+Códigos realizados no Curso de Desenvolvimento Full Stack - Pós Graduação na PUCRS.
