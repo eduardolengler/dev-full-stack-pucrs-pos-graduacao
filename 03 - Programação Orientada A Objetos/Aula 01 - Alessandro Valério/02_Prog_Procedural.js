@@ -1,4 +1,5 @@
 // Aula 1 - Parte 1 
+
 let horaExtra = 100;
 let qtHoras = 20;
 let salarioFixo = 5000;
