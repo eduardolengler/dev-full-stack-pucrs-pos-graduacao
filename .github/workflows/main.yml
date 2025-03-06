@@ -1,16 +1,18 @@
-name: Exemplo de Pipeline
+name: CI
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
 
 jobs:
-  build:
+  CI:
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-    - name: Executar um script
-      run: echo "Olá, GitHub Actions!"
+    - name: Setup do NodeJS
+    - uses: actions/setup-node@v4.2.0
+      with:
+       node-version: 22.11.0
+    
