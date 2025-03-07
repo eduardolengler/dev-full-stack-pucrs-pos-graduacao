@@ -18,6 +18,7 @@ jobs:
 
     - name: Instalar dependências
       run: |
+        cd src;
         npm install -g mocha;
         npm install
 
