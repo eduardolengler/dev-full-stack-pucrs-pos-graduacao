@@ -16,9 +16,13 @@ jobs:
       with:
        node-version: 22.11.0
 
-    - name: Instalação do Mocha e dos pacotes para teste
+    - name: Instalar dependências
       run: |
         cd src;
-        npm install -g mocha;
         npm install
+
+    - name: Rodar os testes com Mocha
+      run: |
+        cd src;
+        npx mocha
     
