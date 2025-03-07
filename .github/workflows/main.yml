@@ -18,11 +18,11 @@ jobs:
 
     - name: Instalar dependências
       run: |
-        cd conversao-temperatura/src;
+        cd conversao-temperatura\src;
         npm install
 
     - name: Rodar os testes com Mocha
       run: |
-        cd conversao-temperatura/src;
+        cd conversao-temperatura\src;
         npx mocha
     
