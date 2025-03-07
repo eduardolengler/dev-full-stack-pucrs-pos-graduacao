@@ -18,11 +18,9 @@ jobs:
 
     - name: Instalar dependências
       run: |
-        
+        npm install -g mocha;
         npm install
 
     - name: Rodar os testes com Mocha
-      run: |
-        
-        npx mocha
+      run: mocha src/test/convert.js
     
