@@ -18,11 +18,11 @@ jobs:
 
     - name: Instalar dependências
       run: |
-        cd /src;
+        
         npm install
 
     - name: Rodar os testes com Mocha
       run: |
-        cd /src;
+        
         npx mocha
     
