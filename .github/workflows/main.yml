@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup do NodeJS
+      uses: actions/setup-node@v4.2.0
+      with:
+       node-version: 22.11.0
+
+    - name: Instalar dependências
+      run: |
+        cd src;
+        npm install -g mocha;
+        npm install
+
+    - name: Rodar os testes com Mocha
+      run: mocha src/test/convert.js
+    
