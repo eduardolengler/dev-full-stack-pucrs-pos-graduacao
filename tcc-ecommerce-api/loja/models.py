@@ -9,6 +9,7 @@ class Produto(models.Model):
     estoque = models.IntegerField(default=0)
     ativo = models.BooleanField(default=True)
     data_criacao = models.DateTimeField(auto_now_add=True)
+    foto = models.ImageField(upload_to='fotos_produtos/', null=True, blank=True)
 
     def __str__(self):
         return self.nome

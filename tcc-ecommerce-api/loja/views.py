@@ -2,7 +2,7 @@
 from rest_framework import viewsets
 from .models import Produto
 from django.contrib.auth.models import User
-from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
+from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser, AllowAny
 from .serializers import ProdutoSerializer, ClienteSerializer, PedidoSerializer # Importa o novo serializer
 from .models import Pedido
 
@@ -10,7 +10,8 @@ from .models import Pedido
 class ProdutoViewSet(viewsets.ModelViewSet):
     queryset = Produto.objects.all() # Busca todos os produtos no banco
     serializer_class = ProdutoSerializer # Usa o tradutor criado
-    permission_classes = [IsAuthenticated] # Produtos: Só quem tem token pode ver ou editar (Padrão de segurança)
+    #permission_classes = [IsAuthenticated] # Produtos: Só quem tem token pode ver ou editar (Padrão de segurança)
+    permission_classes = [AllowAny] # Libera para o React ver os Produtos
 
 class ClienteViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
