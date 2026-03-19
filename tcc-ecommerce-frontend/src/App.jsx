@@ -17,7 +17,7 @@ function Home() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-gray-800 mb-6">Destaques</h2>
+      <h2 className="text-3xl font-bold text-gray-800 mb-6">Produtos em Destaques:</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {produtos.map(p => (
           <div key={p.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
